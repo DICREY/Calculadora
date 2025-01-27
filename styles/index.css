@@ -81,8 +81,8 @@ main span {
     width: 100%;
     color: var(--gray);
     font-weight: bold ;
-    
     background: transparent;
+    overflow: auto;
 }
 button {
     cursor: pointer;

@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ]
     
     // Events
+    document.addEventListener("keypress",() => calc(true))
     btnDelete.addEventListener("click",deleteOne)
     igual.addEventListener("click",() => calc(false))
     btns.forEach(i => {
@@ -170,10 +171,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             })
         if (screenLS) {
-            if (resultList) {
-                screenLabelSecond.innerText = resultList
-            } else screenLabelSecond.innerText = "0"
-        } else screenLabel.value = resultList 
+            resultList? screenLabelSecond.innerText = resultList:
+            screenLabelSecond.innerText = "0"
+        } else resultList? screenLabel.value = resultList:
+            screenLabel.value = "0"
     }
 
     function useKeyboard() {
