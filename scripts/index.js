@@ -24,9 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cero = document.getElementById("cero")
     const btnDelete = document.getElementById("btnDelete")
     const igual = document.getElementById("igual")
-
-    // Vars
-    let result
     
     // Lists
     const btns = [
@@ -111,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         i.btn.addEventListener("click",() => {
             i.btn === deleteAll? screenLabel.value = ""
             :screenLabel.value += i.value
+            calc(true)
         })
     })
 
@@ -181,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.addEventListener("keydown",(e)=> {
             calc(true)
             if (screenLabelSecond.innerText === undefined) screenLabelSecond.innerText = "0"
-
             btns.forEach(i => {
                 if (e.key === i.value) screenLabel.value += i.value
             })
